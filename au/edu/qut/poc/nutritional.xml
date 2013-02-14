@@ -7,9 +7,9 @@
     <sampleQuery>select * from {table} where product="chicken breast"</sampleQuery>
   </meta>
   <bindings>
-   <select itemPath="results.td" produces="XML">
+   <select itemPath="results" produces="XML">
       <inputs>
-        <key id="product" type="xs:string" paramType="query" />
+        <key id="product" type="xs:string" paramType="variable" required="true" />
       </inputs>
         <execute>
             <![CDATA[              
