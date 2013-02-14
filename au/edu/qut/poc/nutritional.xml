@@ -13,7 +13,7 @@
       </inputs>
         <execute>
             <![CDATA[              
-                var url = "select * from html where url='http://www.paodeacucar.com.br/busca/'" + product
+                var url = "select * from html where url='http://www.paodeacucar.com.br/busca/" + product +"'"
                 var path = " and xpath in ('//table[1]//td')"
                 var q = y.query(url + path);
                 response.object = q.results;
