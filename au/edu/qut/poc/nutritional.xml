@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Charleston Telles</author>
+    <description>Search Nutritional Information</description>
+    <documentationURL>TBD</documentationURL>
+    <sampleQuery>select * from {table} where product="chicken breast"</sampleQuery>
+  </meta>
+  <bindings>
+   <select itemPath="results.a" produces="XML">
+      <inputs>
+        <key id="product" type="xs:string" paramType="query" />
+      </inputs>
+        <execute>
+            <![CDATA[              
+                var url = "select * from html where url='http://www.paodeacucar.com.br/busca/'" + product
+                var path = "and xpath in ('//table[@class=\"listagemProdutos tabelaProdutos\"]//a[@class=\"prdNome\"]')"
+                var q = y.query(url + path);
+                response.object = q.results;
+            ]]>
+        </execute>
+
+    </select>
+  </bindings>
+</table>
