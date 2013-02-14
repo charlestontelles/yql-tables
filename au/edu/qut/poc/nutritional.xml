@@ -7,13 +7,13 @@
     <sampleQuery>select * from {table} where product="chicken breast"</sampleQuery>
   </meta>
   <bindings>
-   <select itemPath="results" produces="XML">
+   <select itemPath="results.td" produces="XML">
       <inputs>
         <key id="product" type="xs:string" paramType="query" />
       </inputs>
         <execute>
             <![CDATA[              
-                var url = "select * from html where url='http://www.paodeacucar.com.br/busca/frango'"
+                var url = "select * from html where url='http://www.paodeacucar.com.br/busca/'" + product
                 var path = " and xpath in ('//table[1]//td')"
                 var q = y.query(url + path);
                 response.object = q.results;
