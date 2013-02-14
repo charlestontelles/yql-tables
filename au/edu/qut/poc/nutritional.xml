@@ -14,7 +14,7 @@
         <execute>
             <![CDATA[              
                 var url = "select * from html where url='http://www.paodeacucar.com.br/busca/" + product +"'"
-                var path = " and xpath in ('//table[1]//td')"
+                var path = " and xpath in ('//table[@class=\"listagemProdutos tabelaProduto\s"]//a[@class=\"prdNome\"]')"
                 var q = y.query(url + path);
                 response.object = q.results;
             ]]>
