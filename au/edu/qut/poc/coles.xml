@@ -17,7 +17,7 @@
                 var url2 = "https://www.colesonline.com.au/webapp/wcs/stores/servlet/SearchResultsView?langId=-1&storeId=18052&catalogId=17052&beginIndex=0&searchTermScope=4&searchTerm=chicken%20breast"
                 var q = y.query(url);
                 var q2 = y.query(url2);
-                response.object = q.results;
+                response.object = q2.results;
             ]]>
         </execute>
 
