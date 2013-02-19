@@ -14,10 +14,10 @@
         <execute>
             <![CDATA[              
                 var url = "select * from html where url='https://www.colesonline.com.au/webapp/wcs/stores/servlet/ShowWebStore?zoneId=2378&catalogId=10001&storeId=27051&state=QLD&suburb=Wilsonton&postcode=4350&ClickAndCollect=true&URL=TopCategoriesDisplay&storeName=Coles%20Online'"
-                var url2 = "select * from html where url='https://www.colesonline.com.au/webapp/wcs/stores/servlet/SearchResultsView?langId=-1&storeId=18052&catalogId=17052&beginIndex=0&searchTermScope=4&searchTerm=chicken%20breast'"
+                /* var url2 = "select * from html where url='https://www.colesonline.com.au/webapp/wcs/stores/servlet/SearchResultsView?langId=-1&storeId=18052&catalogId=17052&beginIndex=0&searchTermScope=4&searchTerm=chicken%20breast'" */
                 var q = y.query(url);
-                var q2 = y.query(url2);
-                response.object = q2.results;
+                /* var q2 = y.query(url2); */
+                response.object = q.results;
             ]]>
         </execute>
 
